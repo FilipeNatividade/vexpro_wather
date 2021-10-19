@@ -2,13 +2,14 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   align-items: center;
+  background-image: linear-gradient( #7990ea, #e5e9f9);
   display: flex;
   justify-content: center;
   height: 100vh;
   width: 100%;
-  h1{
-      color: #2e3a6a;
-      margin-bottom: 25px;
+  h1 {
+    color: #2e3a6a;
+    margin-bottom: 25px;
   }
 `;
 export const Content = styled.div`
@@ -20,7 +21,6 @@ export const Content = styled.div`
   justify-content: center;
   padding: 25px;
   padding-bottom: 0;
-
 `;
 
 export const ButtonLogin = styled.button`
@@ -29,12 +29,12 @@ export const ButtonLogin = styled.button`
   color: #fff;
   font-size: 18px;
   font-weight: bolder;
-  padding: 10px 0 ;
+  padding: 10px 0;
   margin-bottom: 25px;
   text-align: left;
   width: 350px;
-  .icon{
-      width: 40px;
-      margin: 0 25px ;
+  .icon {
+    width: 40px;
+    margin: 0 25px;
   }
 `;
