@@ -2,8 +2,8 @@ import { useHistory } from "react-router";
 import { Github, Facebook } from "@styled-icons/bootstrap";
 import { GooglePlus3 } from "@styled-icons/icomoon/GooglePlus3";
 import { useValues } from "../../Providers/ValueContext";
-import { Container, Content, ButtonLogin } from "./style";
 import { googleLogar, facebookLogar, githubLogar } from "../../Firebase";
+import { Container, Logo,Content, ButtonLogin } from "./style";
 
 const Login = () => {
   const { user, actionLoginData } = useValues(null);
@@ -28,13 +28,13 @@ const Login = () => {
     }
 
     result && (await actionLoginData(result));
-    result && (await history.push("/home"));
+    result && ( history.push("/home"));
   };
 
   return (
     <Container>
       <Content>
-        <img src="./images/logo.png" alt="logo" />
+        <Logo src="./images/logo.png" alt="logo" />
         <h1>VexPro wather</h1>
         <ButtonLogin color="#000" onClick={() => actionLoginAccount("github")}>
           <Github className="icon" /> Fazer login com Github

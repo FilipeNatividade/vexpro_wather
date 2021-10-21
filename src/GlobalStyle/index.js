@@ -6,6 +6,9 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
+    body{
+        color: #2c3963;
+    }
     button,input{
         border: none;
         overflow: none;
@@ -19,5 +22,5 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-direction: column;
     }
-`
-export default GlobalStyle
+`;
+export default GlobalStyle;

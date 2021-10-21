@@ -14,8 +14,8 @@ const Header = () => {
     <Container>
       <Logo src="./images/logo.png" alt="logo" />
       <Infos>
-        <NameUser>{user.name}</NameUser>
         <Avatar src={user.avatar} alt="avatar" />
+        <NameUser>{user.name}</NameUser>
         <BntExit title="Sair" onClick={handleBack}>
           <Exit className="icon"/>
         </BntExit>

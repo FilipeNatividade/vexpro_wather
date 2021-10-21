@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   align-items: center;
-  background-image: linear-gradient( #7990ea, #e5e9f9);
+  background-image: linear-gradient(#7990ea, #e5e9f9);
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -12,6 +12,11 @@ export const Container = styled.div`
     margin-bottom: 25px;
   }
 `;
+
+export const Logo = styled.img`
+  width: 125px;
+`;
+
 export const Content = styled.div`
   align-items: center;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
@@ -21,18 +26,21 @@ export const Content = styled.div`
   justify-content: center;
   padding: 25px;
   padding-bottom: 0;
+  max-width: 370px;
+  width: 100%;
 `;
 
 export const ButtonLogin = styled.button`
   background-color: ${(props) => props.color};
   border-radius: 8px;
   color: #fff;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bolder;
   padding: 10px 0;
   margin-bottom: 25px;
   text-align: left;
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   .icon {
     width: 40px;
     margin: 0 25px;
