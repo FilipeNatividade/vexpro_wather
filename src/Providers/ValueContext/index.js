@@ -20,8 +20,8 @@ export const ValueProvider = ({ children }) => {
 
     let userLocal = JSON.parse(localStorage.getItem("user"));
     setUser({
-      name: userLocal.name,
       email: userLocal.email,
+      name: userLocal.name,
       avatar: userLocal.avatar,
       password: userLocal.password,
     });
