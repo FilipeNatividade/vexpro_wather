@@ -1,6 +1,8 @@
 import { Switch, Route } from "react-router-dom";
 import Login from "../Pages/Login";
 import Home from '../Pages/Home'
+import Register from "../Pages/Register";
+import NotFound from "../Components/NotFound";
 
 const Routes = () => {
   return (
@@ -11,8 +13,11 @@ const Routes = () => {
       <Route exact path="/home">
           <Home/>
       </Route>
+      <Route exact path="/register">
+          <Register/>
+      </Route>
       <Route exact path="*" >
-          <h1>not found</h1>
+          <NotFound/>
       </Route>
     </Switch>
   );

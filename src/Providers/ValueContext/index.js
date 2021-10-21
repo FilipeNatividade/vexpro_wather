@@ -6,15 +6,25 @@ const ValueContext = createContext();
 export const ValueProvider = ({ children }) => {
   const [user, setUser] = useState({
     name: "Usuário",
+    email:'',
     avatar: "./images/avatar.png",
+    password: "",
   });
   const [wather, setWather] = useState([]);
   const [data, setData] = useState({});
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    let GetLocal = JSON.parse(localStorage.getItem("cards"));
-    GetLocal && setWather(...wather, GetLocal);
+    let getLocal = JSON.parse(localStorage.getItem("cards"));
+    getLocal && setWather(...wather, getLocal);
+
+    let userLocal = JSON.parse(localStorage.getItem("user"));
+    setUser({
+      name: userLocal.name,
+      email: userLocal.email,
+      avatar: userLocal.avatar,
+      password: userLocal.password,
+    });
   }, []);
 
   useEffect(() => {
@@ -24,13 +34,30 @@ export const ValueProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem("cards", JSON.stringify(wather));
     setData({});
-  }, [wather]);
+    localStorage.setItem("user", JSON.stringify(user));
+  }, [wather, user]);
 
-  const actionLoginData = (userApi) => {
-    let newUser = {
-      name: userApi.displayName,
-      avatar: userApi.photoURL,
-    };
+  const actionLoginData = (src, userApi) => {
+    let newUser 
+    switch (src) {
+      case 'google':
+        newUser = {
+          name: userApi.displayName,
+          avatar: userApi.photoURL,
+        };
+        break;
+        case 'facebook':
+        newUser = {
+          name: userApi.name,
+          avatar: userApi.picture.data.url,
+        };
+        break;
+    
+      default:
+        break;
+    }
+
+    
     setUser(newUser);
   };
 

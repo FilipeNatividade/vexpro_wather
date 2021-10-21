@@ -11,7 +11,7 @@ const Home = () => {
   const { user,wather, error } = useValues();
   const history = useHistory();
 
-  user.name !== 'Usuário' && history.push("/");
+  user.name === 'Usuário' && history.push("/");
   return (
     <Container>
       <Header />

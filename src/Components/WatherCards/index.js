@@ -3,8 +3,7 @@ import { useValues } from "../../Providers/ValueContext";
 import { Container, TextsValue, DeleteBnt } from "./style";
 
 const WatherCards = ({ cityRes, temp, tempMax, tempMin, id }) => {
-  const { wather, setWather } = useValues();
-  console.log(wather);
+  const {setWather } = useValues();
 
   const handleDelete = (id) => {
     setWather((wather) => wather.filter((item) => item.id !== id));

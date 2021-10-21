@@ -1,6 +1,4 @@
-
-O teste será uma aplicação contendo uma tela de login com autenticação via rede social/git (escolher uma entre: git,facebook, google). A autenticação deverá ser usada para confirmar a liberação de todas as rotas internas da aplicação (somente poderá acessar as rotas internas se o usuário for autenticado, caso não esteja logado, deverá retornar para tela de login). Após login, deverá ser direcionado para a página principal, que é a consulta de temperatura por local. Você poderá consultar a temperatura manualmente ou via localização atual (necessário permissão do usuário para liberar acesso a localização atual). Entrará como requisito buscar apis/libs disponíveis para essa consulta. Deverá ser feito a estilização do sistema utilizando styled-components.
-Será observado nesse teste a utilização de hooks, redux, context, consulta api
+obs: se a chave de request da api do clima parar de funcionar só me avisar que troco e faço o push.
 
 # Getting Started with Create React App
 
